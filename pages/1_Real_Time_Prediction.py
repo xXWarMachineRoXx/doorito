@@ -14,6 +14,7 @@ with st.spinner('Retriving Data from Redis DB ...'):
     st.dataframe(redis_face_db)
     
 st.success("Data sucessfully retrived from Redis")
+st.sidebar.camera_input('My webcam', key='cam')
 
 # time 
 waitTime = 30 # time in sec
