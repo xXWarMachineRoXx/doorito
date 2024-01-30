@@ -1,5 +1,5 @@
 import streamlit as st 
-from Home import face_rec
+from app import face_rec
 import pandas as pd
 st.set_page_config(page_title='Reporting',layout='wide')
 st.subheader('Reporting')
