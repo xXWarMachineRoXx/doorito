@@ -14,7 +14,6 @@ with st.spinner('Retriving Data from Redis DB ...'):
     st.dataframe(redis_face_db)
     
 st.success("Data sucessfully retrived from Redis")
-st.sidebar.camera_input('My webcam', key='cam')
 
 # time 
 waitTime = 30 # time in sec
@@ -24,15 +23,13 @@ realtimepred = face_rec.RealTimePred() # real time prediction class
 # Real Time Prediction
 # streamlit webrtc
 # callback function
-# Define your global variables
-
-# Define your video_frame_callback function
 def video_frame_callback(frame):
     global setTime
     
     img = frame.to_ndarray(format="bgr24") # 3 dimension numpy array
     # operation that you can perform on the array
-    pred_img = realtimepred.face_prediction(img, redis_face_db, 'facial_features', ['Name','Role'], thresh=0.5)
+    pred_img = realtimepred.face_prediction(img,redis_face_db,
+                                        'facial_features',['Name','Role'],thresh=0.5)
     
     timenow = time.time()
     difftime = timenow - setTime
@@ -41,10 +38,8 @@ def video_frame_callback(frame):
         setTime = time.time() # reset time        
         print('Save Data to redis database')
     
+
     return av.VideoFrame.from_ndarray(pred_img, format="bgr24")
 
-# Connect camera input to the video_frame_callback function
-came = st.sidebar.camera_input('My webcam', key='cam')
 
-# Stream the webcam feed and process frames using the video_frame_callback function
-webrtc_streamer(key="realtimePrediction", video_stream=came, video_processor_factory=video_frame_callback)
+webrtc_streamer(key="realtimePrediction", video_frame_callback=video_frame_callback)
