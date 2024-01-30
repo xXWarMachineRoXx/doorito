@@ -44,7 +44,7 @@ def video_frame_callback(frame):
     return av.VideoFrame.from_ndarray(pred_img, format="bgr24")
 
 # Connect camera input to the video_frame_callback function
-cam = st.sidebar.camera_input('My webcam', key='cam')
+came = st.sidebar.camera_input('My webcam', key='cam')
 
 # Stream the webcam feed and process frames using the video_frame_callback function
-webrtc_streamer(key="realtimePrediction", video_stream=cam, video_processor_factory=video_frame_callback)
+webrtc_streamer(key="realtimePrediction", video_stream=came, video_processor_factory=video_frame_callback)
