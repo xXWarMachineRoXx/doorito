@@ -50,7 +50,7 @@ result_init = EMBUDP_INIT(address, port)
 
 # Get device information
 device_info_buffer = ctypes.create_string_buffer(1024)  # Buffer to store device information
-result_device_info = Z_GetDeviceInfo(EMBUDP_INIT, device_info_buffer)
+result_device_info = Z_GetDeviceInfo(result_init, device_info_buffer)
 
 # Check the device info result
 if result_device_info == 1: 
