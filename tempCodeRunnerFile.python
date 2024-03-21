@@ -1,0 +1,10 @@
+import onnxruntime as ort
+
+# Define the CUDA execution provider with the desired CUDA version
+providers = [("CUDAExecutionProvider", {"use_tf32": 0})]
+
+# Create session options
+sess_options = ort.SessionOptions()
+
+# Create the inference session with the specified providers
+sess = ort.InferenceSession("my_model.onnx", sess_options=sess_options, providers=providers)
