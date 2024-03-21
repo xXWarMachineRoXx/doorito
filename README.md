@@ -1,3 +1,6 @@
+![Doorito](doorito.gif)
+
+
 ---
 title: Attendance App
 emoji: 🌍
