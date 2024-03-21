@@ -1,6 +1,17 @@
 
 ![Doorito](https://github.com/xXWarMachineRoXx/doorito/assets/47086987/647f9495-0ef5-49ba-b672-7ec11df7f377)
 
+🚪Doorito is a simple application that recognizes faces with insightface AI 🔮, combines data with ZK devices and syncs to Kredily for attendance automation. :D
+
+
+
+# TO DO 
+✨ Recording data in the format that kredily requires
+✨ logging to kredily
+
+
+
+# Credits 
 ---
 title: Attendance App
 emoji: 🌍
