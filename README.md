@@ -1,5 +1,5 @@
-![Doorito](doorito.gif)
 
+![Doorito](https://github.com/xXWarMachineRoXx/doorito/assets/47086987/647f9495-0ef5-49ba-b672-7ec11df7f377)
 
 ---
 title: Attendance App
