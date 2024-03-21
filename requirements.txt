@@ -10,3 +10,6 @@ pyarrow
 onnxruntime
 streamlit
 streamlit-webrtc
+pyzk
+selenium
+webdriver_manager

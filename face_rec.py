@@ -15,11 +15,15 @@ import os
 
 
 
+# use env for redis db
+from dotenv import load_dotenv
+load_dotenv()
 
 # Connect to Redis Client
-hostname = 'redis-11109.c321.us-east-1-2.ec2.cloud.redislabs.com'
-portnumber = 11109
-password = 'HI3acnzpSHJcssm7qtuuv7GmeakjIEKl'
+hostname=os.getenv('REDIS_HOST')
+portnumber=os.getenv('REDIS_PORT')
+password=os.getenv('REDIS_PASSWORD')
+
 
 r = redis.StrictRedis(host=hostname,
                       port=portnumber,
