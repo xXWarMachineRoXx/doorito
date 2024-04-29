@@ -1,5 +1,6 @@
 # Doorito
-> A 2024 hobby door access manamgemnt project  
+> A 2024 hobby door access manamgemnt project
+
 Doorito is a simple Door access management (Face Indentification/Recognition + Fingerprint ) + Time/Breaks Tracking software integration layer ( upcoming )
 It can work with Zkteco devices and it has a simple to use interface built with streamlit that can be extended. 
 
