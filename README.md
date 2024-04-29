@@ -1,5 +1,5 @@
 # Doorito
-
+> A 2024 hobby door access manamgemnt project  
 Doorito is a simple Door access management (Face Indentification/Recognition + Fingerprint ) + Time/Breaks Tracking software integration layer ( upcoming )
 It can work with Zkteco devices and it has a simple to use interface built with streamlit that can be extended. 
 
@@ -12,7 +12,7 @@ It can work with Zkteco devices and it has a simple to use interface built with 
 
 1. Switch to the other doorito/lucifer branch as the main branch only contains a copy of the dlls needed for the software to work.
 2. After cloning the branch, run `pip install -r requirements.txt` (make sure you have streamlit installed) and then run `streamlit run app.py`.
-3. VOila! Register your face and name and also change the config file to make sure you have a redis account ( make a free one / while its free 🥺)
+3. VOila! Register your face and name and also change the config file to make sure you have a redis account ( make a free one / [while its free 🥺](https://redis.io/blog/what-redis-license-change-means-for-our-managed-service-providers/))
 4. Right now it only tracks how long were you looking at the screen, but future attemps will change that to detect what time did you leave and come back.
 
 
